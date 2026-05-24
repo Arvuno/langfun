@@ -153,3 +153,94 @@ pip install langfun[vertexai,mime,ui] --pre
 ```
 
 *Disclaimer: this is not an officially supported Google product.*
+
+## Development Guide
+
+### Setting Up Your Development Environment
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/okwn/langfun.git
+   cd langfun
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install development dependencies:**
+   ```bash
+   pip install -e ".[all]"
+   pip install pytest pytest-cov ruff pre-commit
+   ```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=langfun --cov-report=html
+
+# Run specific test file
+pytest tests/your_test_file.py
+
+# Run tests in parallel
+pytest -n auto
+```
+
+### Code Style & Linting
+
+```bash
+# Format code
+ruff format .
+
+# Run linting
+ruff check .
+
+# Run pre-commit hooks
+pre-commit run --all-files
+```
+
+### Building Documentation
+
+```bash
+# Install docs dependencies
+pip install -e ".[docs]"
+
+# Build documentation
+cd docs && make html
+```
+
+### Submitting Changes
+
+1. Create a feature branch from `main`:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. Make your changes and commit:
+   ```bash
+   git commit -m "Add your descriptive commit message"
+   ```
+
+3. Push to your fork and create a PR:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+### Useful Commands
+
+```bash
+# Clean build artifacts
+make clean
+
+# Run type checking
+make typecheck
+
+# Run all quality checks
+make quality
+```
