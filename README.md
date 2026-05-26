@@ -243,4 +243,6 @@ make typecheck
 
 # Run all quality checks
 make quality
-```
+
+## Contributing
+PRs welcome!```
