@@ -42,7 +42,7 @@ class Itinerary(pg.Object):
 class PlaceOfInterest(pg.Object):
   """The name of a place of interest.
 
-  A place of interest is a place that people ususally visit during their
+  A place of interest is a place that people usually visit during their
   travels.
   """
 
@@ -83,7 +83,7 @@ class SchemaReprTest(unittest.TestCase):
             class PlaceOfInterest:
               \"\"\"The name of a place of interest.
 
-              A place of interest is a place that people ususally visit during their
+              A place of interest is a place that people usually visit during their
               travels.
               \"\"\"
               name: str

@@ -402,7 +402,7 @@ class Template(
 
       with caching_context:
         # We use **kwargs for both the missing parts of the child components
-        # and as the overriden attributes of current component.
+        # and as the overridden attributes of current component.
         with component.context(**kwargs):
           with self.override(**kwargs):
             inputs = dict()

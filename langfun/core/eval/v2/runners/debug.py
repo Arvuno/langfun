@@ -37,4 +37,4 @@ class DebugRunner(sequential.SequentialRunner):
     self.current_run.rebind(raise_if_has_error=True, skip_notification=True)
 
   def _save_run_manifest(self) -> None:
-    """Do nothing to avoid overriden existing runs."""
+    """Do nothing to avoid overridden existing runs."""
