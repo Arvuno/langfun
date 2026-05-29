@@ -244,3 +244,5 @@ make typecheck
 # Run all quality checks
 make quality
 ```
+
+- Documentation updated for clarity
