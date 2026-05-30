@@ -92,11 +92,11 @@ class ComponentContextTest(unittest.TestCase):
       # Test nested contextual override with override_attrs=True (default).
       with lf.context(y=4, z=4, override_attrs=True):
 
-        # Member attribute is not overriden as current scope does not override
+        # Member attribute is not overridden as current scope does not override
         # `x``.
         self.assertEqual(a1.x, 1)
 
-        # Member attribute is overriden.
+        # Member attribute is overridden.
         self.assertEqual(a1.y, 4)
 
         # `lf.Component.override` takes precedence over
@@ -105,7 +105,7 @@ class ComponentContextTest(unittest.TestCase):
           self.assertEqual(a1.y, 3)
         self.assertEqual(a1.y, 4)
 
-        # Member default is overriden.
+        # Member default is overridden.
         self.assertEqual(a1.z, 4)
 
       self.assertEqual(a1.y, 2)

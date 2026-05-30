@@ -198,7 +198,7 @@ class LangFuncCallTest(unittest.TestCase):
     self.assertEqual(c.render(), 'Q: compute 2 + 2\n\nA: 4')
     self.assertEqual(c.render(y=3), 'Q: compute 2 + 3\n\nA: 5')
 
-  def test_call_with_overriden_lm_input(self):
+  def test_call_with_overridden_lm_input(self):
     t = LangFunc('Hello')
     with component.context(lm=ExcitedEchoer()):
       self.assertEqual(t(lm_input=message.UserMessage('Hi')), 'Hi!!!')
