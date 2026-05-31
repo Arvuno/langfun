@@ -132,7 +132,7 @@ class Veo(vertexai.VertexAI):
   ] = False
 
   person_generation: Annotated[
-      Literal['allow_adult', 'dont_allow', 'allow_all'],
+      Literal['allow_adult', 'don't_allow', 'allow_all'],
       'Person generation policy.',
   ] = 'allow_adult'
 
